@@ -1,0 +1,6 @@
+{
+    "name": "eramba/plugins.eramba.org",
+    "homepage": "https://plugins.eramba.org",
+    "repositories": [],
+    "require-all": true
+}
