@@ -1,7 +1,7 @@
 {
-    "name": "cakephp/app",
-    "description": "CakePHP skeleton app",
-    "homepage": "https://cakephp.org",
+    "name": "eramba/plugins.eramba.org",
+    "description": "Private registry for eramba packages",
+    "homepage": "https://plugins.eramba.org",
     "type": "project",
     "license": "MIT",
     "require": {
