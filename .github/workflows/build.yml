@@ -1,6 +1,7 @@
 name: Build Registry
 
 on:
+  push:
   schedule:
   - cron: "*/10 * * * *"
 
@@ -19,7 +20,8 @@ jobs:
         coverage: none
 
     - name: Composer install
-      run: composer install --no-interaction
+      run: |
+        composer install --no-interaction
 
     - name: Build satis
       run: vendor/bin/satis build --no-interaction
@@ -31,5 +33,6 @@ jobs:
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "shrkz1@users.noreply.github.com"
-        git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+        git add docs/*
+        git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push

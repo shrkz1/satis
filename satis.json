@@ -1,7 +1,14 @@
 {
     "name": "shrkz1/satis",
     "homepage": "http://wajko.org",
-    "output-dir": "webroot",
+    "output-dir": "docs",
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "cakephp/plugin-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
     "repositories": [
         {
             "type": "vcs",
