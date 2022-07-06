@@ -1,10 +1,12 @@
 {
     "packages": [],
     "includes": {
-        "include/all$96e5c0926e9d7f87094d1ba307e38ea76cd09c53.json": {
-            "sha1": "96e5c0926e9d7f87094d1ba307e38ea76cd09c53"
+        "include/all$7f7d36431812b0da7f543595f1eef707dddaff77.json": {
+            "sha1": "7f7d36431812b0da7f543595f1eef707dddaff77"
         }
     },
     "metadata-url": "/p2/%package%.json",
-    "available-packages": []
+    "available-packages": [
+        "moltin/cart"
+    ]
 }
