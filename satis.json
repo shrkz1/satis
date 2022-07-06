@@ -1,6 +1,7 @@
 {
     "name": "eramba/plugins.eramba.org",
     "homepage": "https://plugins.eramba.org",
+    "output-dir": "webroot",
     "repositories": [
         {
             "type": "vcs",
