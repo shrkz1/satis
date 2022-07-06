@@ -1,6 +1,35 @@
 {
     "name": "eramba/plugins.eramba.org",
     "homepage": "https://plugins.eramba.org",
-    "repositories": [],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:eramba/notification-system.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:eramba/mapping.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:eramba/api.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:eramba/vendor-assessments.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:eramba/account-reviews.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:eramba/custom-dynamic-status.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:eramba/community-pack.git"
+        }
+    ],
     "require-all": true
 }
