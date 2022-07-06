@@ -1,0 +1,35 @@
+name: Build Registry
+
+on:
+  schedule:
+  - cron: "*/10 * * * *"
+
+jobs:
+  build-satis:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.1
+        extensions: mbstring, intl, pdo_sqlite
+        coverage: none
+
+    - name: Composer install
+      run: composer install --no-interaction
+
+    - name: Build satis
+      run: vendor/bin/satis build --no-interaction
+
+    - name: GIT commit and push all changed files
+      env:
+        CI_COMMIT_MESSAGE: CI Satis Build
+        CI_COMMIT_AUTHOR: shrkz1 <martin@eramba.org>
+      run: |
+        git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
+        git config --global user.email "shrkz1@users.noreply.github.com"
+        git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
+        git push
