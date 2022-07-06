@@ -12,11 +12,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:shrkz1/phpstan-src.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:shrkz1/cakephp.git"
+            "url": "git@github.com:moltin/cart.git"
         }
     ],
     "require-all": true
