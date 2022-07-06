@@ -1,35 +1,15 @@
 {
-    "name": "eramba/plugins.eramba.org",
-    "homepage": "https://plugins.eramba.org",
+    "name": "shrkz1/satis",
+    "homepage": "http://wajko.org",
     "output-dir": "webroot",
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:eramba/notification-system.git"
+            "url": "git@github.com:shrkz1/phpstan-src.git"
         },
         {
             "type": "vcs",
-            "url": "git@github.com:eramba/mapping.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:eramba/api.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:eramba/vendor-assessments.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:eramba/account-reviews.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:eramba/custom-dynamic-status.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:eramba/community-pack.git"
+            "url": "git@github.com:shrkz1/cakephp.git"
         }
     ],
     "require-all": true
