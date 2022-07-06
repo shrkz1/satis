@@ -24,7 +24,10 @@ jobs:
         composer install --no-interaction
 
     - name: Build satis
-      run: vendor/bin/satis build --no-interaction
+      run: |
+        mkdir -p -m 0600 ~/.ssh && ssh-keyscan github.com >> ~/.ssh/known_hosts
+        ssh -T git@github.com 2>&1 | tee /dev/null
+        vendor/bin/satis build --no-interaction --skip-errors
 
     - name: GIT commit and push all changed files
       env:
