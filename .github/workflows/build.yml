@@ -25,14 +25,3 @@ jobs:
       run: |
         ssh -T git@github.com 2>&1 | tee /dev/null
         vendor/bin/satis build --no-interaction --skip-errors
-
-    - name: GIT commit and push all changed files
-      env:
-        CI_COMMIT_MESSAGE: CI Satis Build
-        CI_COMMIT_AUTHOR: shrkz1 <martin@eramba.org>
-      run: |
-        git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
-        git config --global user.email "shrkz1@users.noreply.github.com"
-        git add docs/*
-        git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-        git push
